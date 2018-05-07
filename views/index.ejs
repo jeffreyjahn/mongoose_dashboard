@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meerkat</title>
+    <script type ="text/javascript" src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css" media="screen">
+
+</head>
+<body>
+    <div id="tupac">
+        <h2>Welcome to the Meerkat Monestary</h2>
+        <% for (meerkat in meerkats) { %> 
+            <%= meerkats[meerkat]._id %>
+            </a>
+            <p>Name: <a href="<%= '/meerkat/'+meerkats[meerkat]._id %>"><%= meerkats[meerkat].name %></a></p>
+            <p>Favorite Food: <%= meerkats[meerkat].favoriteFood %></p>
+            <p>Age: <%= meerkats[meerkat].age %></p>
+            <p>-----------------------------------</p>
+        <% } %>
+        <!--Create Meerkats Here-->
+        <a href="/meerkat/new"><button>Create a new motha Meerkat</button></a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meerkat Man Edit</title>
+    <script type ="text/javascript" src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css" media="screen">
+
+</head>
+<body>
+    <div id="tupac">
+        <form action="<%= '/edit_meerkat/'+meerkats._id %>" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" value="<%= meerkats.name %>"></td>
+                </tr>
+                <tr>
+                    <td>Favorite Food:</td>
+                    <td><input type="text" name='favoriteFood' value="<%= meerkats.favoriteFood %>"></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" name='age' value="<%= meerkats.age %>"></td>
+                </tr>
+            </table>
+            <input type="submit" value='idit_DA*****MEERKAT MON'>
+        </form>
+        <a href="<%= '/meerkat/destroy/'+meerkats._id %>"><button>Self Destruct</button></a>
+        <a href="/"><button>Go back</button></a>
+        <% if(messages.meerkat_reg) { %>
+            <% for (var x of messages.meerkat_reg) { %>
+                <h3><%= x %></h3>
+            <% } %>
+        <% } %>
+    </div>
+</body>
+</html>
